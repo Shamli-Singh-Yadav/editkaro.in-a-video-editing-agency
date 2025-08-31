@@ -1,103 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Editkaro.in</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="up">
-    <div class="words">
-      <h1>Editkaro.in</h1>
-      <a href="#Home">Home</a>
-      <a href="#Portfolio">Portfolio</a>
-      <a href="#Services">Services</a>
-      <a href="#About">About</a>
-      <a href="#Contact">Contact</a>
-    </div>
-  </div>
+  <header class="up">
+    <div class="words container">
+      <h1 class="brand">Editkaro.in</h1>
 
-  
-  <div class="boxx" id="Home">
+      <nav class="nav-links" aria-label="primary">
+        <a href="#Home">Home</a>
+        <a href="#Portfolio">Portfolio</a>
+        <a href="#Services">Services</a>
+        <a href="#About">About</a>
+        <a href="#Contact">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="toggle menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </header>
+  <section class="boxx" id="Home">
     <h1>EDITKARO.IN</h1>
     <h2>CRAFTING VIDEOS THAT ENGAGE</h2>
     <div class="opt-us">
-      <button type="button" class="btn btn-light">View Portfolio</button>
-      <button type="button" class="btn btn-light">Get In Touch</button>
+      <a href="#Portfolio" class="btn btn-light">View Portfolio</a>
+      <a href="#Contact" class="btn btn-light">Get In Touch</a>
     </div>
-  </div>
-
-  <div class="port" id="Portfolio">
+  </section>
+  <section class="port" id="Portfolio">
     <h1>Our Video Portfolio</h1>
     <p>Browse our collection of video projects across different categories and styles</p>
-    <div class="option-keys">
-      <div class="options">
-        <button type="button" href="#allprojects">All Projects</button>
-        <button type="button" href="#shortform">Short Form</button>
-        <button type="button" href="#longform">Long Form</button>
-        <button type="button" href="#gaming">Gaming</button>
-        <button type="button" href="#ecommerce">E-Commerce</button>
-      </div>
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="all">All Projects</button>
+      <button class="filter-btn" data-category="short">Short Form</button>
+      <button class="filter-btn" data-category="long">Long Form</button>
+      <button class="filter-btn" data-category="gaming">Gaming</button>
+      <button class="filter-btn" data-category="ecommerce">E-Commerce</button>
     </div>
-    <div class="list-project">
-      <div class="list">
-        
+
+    <div class="portfolio-slider">
+      <button class="arrow left" id="slideLeft" aria-label="scroll left">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+
+      <div class="card-container" id="slider" aria-live="polite">
+        <article class="card" data-category="short">
+          <div class="card-image">
+            <img src="short1.jpg" alt="Short Form Ad Reel"/>
+            <span class="play-btn">▶</span>
+          </div>
+          <div class="card-content">
+            <h3>Short Form 1</h3>
+            <p>Engaging reels-style ad with snappy cuts and transitions.</p>
+            <span class="tag">Short Form</span>
+          </div>
+        </article>
+
+        <article class="card" data-category="short">
+          <div class="card-image">
+            <img src="short2.jpg" alt="Short Form Product Reel"/>
+          </div>
+          <div class="card-content">
+            <h3>Short Form 2</h3>
+            <p>Product teaser designed for Instagram & YouTube Shorts.</p>
+            <span class="tag">Short Form</span>
+          </div>
+        </article>
+
+        <article class="card" data-category="long">
+          <div class="card-image">
+            <img src="long1.jpg" alt="Long Form YouTube Video"/>
+          </div>
+          <div class="card-content">
+            <h3>Long Form 1</h3>
+            <p>YouTube narrative edit with chaptering and B-roll.</p>
+            <span class="tag">Long Form</span>
+          </div>
+        </article>
+
+        <article class="card" data-category="long">
+          <div class="card-image">
+            <img src="long2.jpg" alt="Podcast edit"/>
+          </div>
+          <div class="card-content">
+            <h3>Long Form 2</h3>
+            <p>Podcast edit with sound cleanup and motion titles.</p>
+            <span class="tag">Long Form</span>
+          </div>
+        </article>
+
+        <article class="card" data-category="gaming">
+          <div class="card-image">
+            <img src="gaming1.jpg" alt="Gaming highlights montage"/>
+          </div>
+          <div class="card-content">
+            <h3>Gaming 1</h3>
+            <p>Fast-paced highlights with velocity & beat sync.</p>
+            <span class="tag">Gaming</span>
+          </div>
+        </article>
+
+        <article class="card" data-category="gaming">
+          <div class="card-image">
+            <img src="gaming2.jpg" alt="Funny gaming edits"/>
+          </div>
+          <div class="card-content">
+            <h3>Gaming 2</h3>
+            <p>Comedy cuts, memes and subtitles for streamers.</p>
+            <span class="tag">Gaming</span>
+          </div>
+        </article>
+
+        <article class="card" data-category="ecommerce">
+          <div class="card-image">
+            <img src="ecom1.jpg" alt="E-commerce product showcase"/>
+          </div>
+          <div class="card-content">
+            <h3>E-Commerce 1</h3>
+            <p>Clean product showcase with macro visuals.</p>
+            <span class="tag">E-Commerce</span>
+          </div>
+        </article>
+
+        <article class="card" data-category="ecommerce">
+          <div class="card-image">
+            <img src="ecom2.jpg" alt="E-commerce ad video"/>
+          </div>
+          <div class="card-content">
+            <h3>E-Commerce 2</h3>
+            <p>High-converting ad creative for online stores.</p>
+            <span class="tag">E-Commerce</span>
+          </div>
+        </article>
+
+        <article class="card" data-category="short">
+          <div class="card-image">
+            <img src="product.jpg" alt="Product Showcase"/>
+          </div>
+          <div class="card-content">
+            <h3>Product Showcase</h3>
+            <p>Short-form product demo with professional transitions.</p>
+            <span class="tag">Short Form</span>
+          </div>
+        </article>
+
+        <article class="card" data-category="gaming">
+          <div class="card-image">
+            <img src="urban.jpg" alt="Urban stories frame"/>
+          </div>
+          <div class="card-content">
+            <h3>Urban Stories</h3>
+            <p>Documentary-style storytelling with ambient cuts.</p>
+            <span class="tag">Long Form</span>
+          </div>
+        </article>
       </div>
+
+      <button class="arrow right" id="slideRight" aria-label="scroll right">
+        <i class="bi bi-chevron-right"></i>
+      </button>
     </div>
-  </div>
+  </section>
 
-
-
-
-
-  <div class="hands-on" id="Services">
+  <section class="hands-on" id="Services">
     <h1>Our Services</h1>
     <p>Professional video editing and social media marketing services to elevate your brand</p>
 
-  </div>
+    <div class="services-container container">
+      <div class="service-card">
+        <i class="bi bi-camera-video"></i>
+        <h3>Video Editing</h3>
+        <p>Cinematic edits, color grading, beat sync, captions and motion graphics.</p>
+        <ul>
+          <li>Reels/Shorts & Long-form</li>
+          <li>Color & Audio polish</li>
+          <li>Motion titles & graphics</li>
+        </ul>
+      </div>
 
+      <div class="service-card">
+        <i class="bi bi-phone"></i>
+        <h3>Social Media Marketing</h3>
+        <p>Content calendars, trend mapping and performance tracking for growth.</p>
+        <ul>
+          <li>Content strategy</li>
+          <li>Posting & thumbnails</li>
+          <li>Analytics reports</li>
+        </ul>
+      </div>
 
-
-  <div class="rope">
-    <div class="list-items">
-      <h3>100+</h3>
-      <p>Happy Clients</p>
+      <div class="service-card">
+        <i class="bi bi-shop"></i>
+        <h3>E-Commerce Videos</h3>
+        <p>Conversion-focused UGC and studio-style product videos for ads.</p>
+        <ul>
+          <li>Amazon/Flipkart creatives</li>
+          <li>UGC ad scripts</li>
+          <li>A/B test variants</li>
+        </ul>
+      </div>
     </div>
+  </section>
 
+  <section class="rope" aria-label="stats">
     <div class="list-items">
-      <h3>500+</h3>
-      <p>Projects Completed</p>
+      <h3>100+</h3><p>Happy Clients</p>
     </div>
-
     <div class="list-items">
-      <h3>5+</h3>
-      <p>Years Experience</p>
+      <h3>500+</h3><p>Projects Completed</p>
     </div>
-
     <div class="list-items">
-      <h3>9</h3>
-      <p>Video Categories</p>
+      <h3>5+</h3><p>Years Experience</p>
     </div>
-  </div>
+    <div class="list-items">
+      <h3>9</h3><p>Video Categories</p>
+    </div>
+  </section>
 
-
-
-  <div class="about-page" id="About">
+  <section class="about-page container" id="About">
     <h1>About Us</h1>
     <div class="parts">
       <div class="sub-part">
-        <p></p>
+        <p>We’re a team of editors & marketers who turn raw footage into scroll-stopping stories. From short-form to full documentaries, we handle edits, color, motion graphics, and platform strategy end-to-end.</p>
       </div>
-
-      <div class="sub-part">
-        images
-      </div>
-
     </div>
-  </div>
+  </section>
+
+  <footer id="Contact">
+    <div class="footer-content container">
+      <h2>Editkaro.in</h2>
+      <p>Crafting videos that engage and inspire. Let’s work together!</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! We will contact you soon.');">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea rows="3" placeholder="Tell us about your project..." required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Editkaro.in • All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+   
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav-links");
+    toggle.addEventListener("click", () => nav.classList.toggle("active"));
+
+    
+    const slider = document.getElementById("slider");
+    document.getElementById("slideLeft").addEventListener("click", () => {
+      slider.scrollBy({ left: -320, behavior: "smooth" });
+    });
+    document.getElementById("slideRight").addEventListener("click", () => {
+      slider.scrollBy({ left: 320, behavior: "smooth" });
+    });
+
+    
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".card");
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelector(".filter-btn.active")?.classList.remove("active");
+        btn.classList.add("active");
+        const cat = btn.dataset.category;
+
+        cards.forEach(c => {
+          c.style.display = (cat === "all" || c.dataset.category === cat) ? "block" : "none";
+        });
+
+        slider.scrollTo({ left: 0, behavior: "smooth" });
+      });
+    });
+  </script>
 </body>
 </html>
